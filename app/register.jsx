@@ -43,7 +43,9 @@ export default function Register() {
 
   return (
     <View className="bg-gray-900 flex-1 items-center justify-center">
-      <Animated.Image entering={FadeInUp.delay(100).duration(100).springify()} style={{height: hp(10.5), width: wp(23)}} className=" mb-5" source={require('../assets/images/logo.png')} />
+      <View style={{ borderRadius: Math.min(hp(10.5), wp(23)) / 2, overflow: 'hidden' }}>
+        <Animated.Image entering={FadeInUp.delay(100).duration(100).springify()} style={{aspectRatio: 1, height: hp(10.5), width: wp(23)}} className=" mb-5" source={require('../assets/images/logo.png')} />
+      </View>
 
       <Animated.Text entering={FadeInUp.delay(200).duration(200).springify()}  style={{fontSize: hp(3)}} className="text-white font-bold"> SIGN UP </Animated.Text>
       <Animated.Text entering={FadeInUp.delay(200).duration(200).springify()}  style={{fontSize: hp(2)}} className="text-white mb-20"> FOR YOUR ACCOUNT</Animated.Text>
