@@ -26,7 +26,7 @@ Login/Signup:
 
 Exercises API:
 
-<img src='https://i.imgur.com/3OOGaYf.gif' title='Exercises' alt='Exercises' />
+<img src='https://i.imgur.com/HHgMbCX.gif' title='Exercises' alt='Exercises' />
 
 Create Template:
 
