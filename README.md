@@ -22,6 +22,7 @@ Here's a walkthrough of the features:
 
 Login/Signup:
 
+
 <img src='https://i.imgur.com/kMgYVsb.gif' title='Login/SignUp' width='' alt=':Login/SignUp' />
 
 Exercises API:
