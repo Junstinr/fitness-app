@@ -22,16 +22,15 @@ Here's a walkthrough of the features:
 
 Login/Signup:
 
-
-<img src='https://i.imgur.com/kMgYVsb.gif' title='Login/SignUp' width='' alt=':Login/SignUp' />
+<img src='https://i.imgur.com/kMgYVsb.gif' title='Login/SignUp' alt='Login/SignUp' />
 
 Exercises API:
 
-<img src='https://i.imgur.com/3OOGaYf.gif' title='Exercises' width='' alt='Exercises' />
+<img src='https://i.imgur.com/3OOGaYf.gif' title='Exercises' alt='Exercises' />
 
 Create Template:
 
-<img src='https://i.imgur.com/NC2USH6.gif' title='Workout' width='' alt='Workout' />
+<img src='https://i.imgur.com/NC2USH6.gif' title='Workout' alt='Workout' />
 
 
 
