@@ -1,8 +1,9 @@
 import { View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { useRouter } from 'expo-router';
 import Animated,{ FadeInUp, FadeInDown, BounceOut } from 'react-native-reanimated';
+import * as SecureStore from 'expo-secure-store';
 
 
 
@@ -12,7 +13,23 @@ export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    // Define the function to find a user
+    // useEffect(() => {
+    //   // Check if user is already logged in
+    //   checkLoginStatus(); // Implement this function to check login status
+    // }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
+    // const checkLoginStatus = async () => {
+    //   const authenticated = await findRecord(); // Check if user is logged in
+    //   if (authenticated) {
+    //     // User is authenticated, navigate to main screen
+    //     router.push('/workout');
+    //   } else {
+    //     // User is not authenticated, navigate to login screen
+    //     router.push('/index');
+    //   }
+    // };
+
+    //function to find a user
     const findRecord = () => {
         if (username.length === 0 || password.length === 0) {
             alert("Required field is missing!");
@@ -29,7 +46,7 @@ export default function Login() {
 
             console.log(Data);
 
-            // Use the fetch API to make a POST request to the login API
+            //use the fetch API to make a POST request to the login API
             fetch(insertAPIURL, {
                 method: 'POST',
                 headers: headers,
@@ -39,13 +56,13 @@ export default function Login() {
                 .then(data => {
                     console.log(data);
 
-                    // Check if the login was successful
+                    //check if the login was successful
                     if (data.status === 'success') {
-                        // Redirect to the Home screen
-                        router.push('/workout');
+                      router.push('/workout');
+                      
                     } else {
-                        // Handle unsuccessful login (show error message, etc.)
-                        console.error('Login failed:', data.message);
+                      //handle unsuccessful login (show error message, etc.)
+                      console.error('Login failed:', data.message);
                     }
                 })
                 .catch(error => console.error('Error:', error));
@@ -76,6 +93,7 @@ export default function Login() {
             placeholder={"Password"}
             keyboardType={"default"} 
             onChangeText={(password) => setPassword(password)}
+            secureTextEntry
         />
     </Animated.View>
 

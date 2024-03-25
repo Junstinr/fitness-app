@@ -11,12 +11,11 @@ export default function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // Define the function to insert a new record (user registration)
+  //function to insert a new record (user registration)
   const insertRecord = () => {
     if (username.length === 0 || password.length === 0) {
       alert("Required field is missing!");
     } 
-    // If both username and password are provided
     else {
       var insertAPIURL = "http://localhost/fitness-app/api/register.php";
       var headers = {
@@ -28,14 +27,19 @@ export default function Register() {
         password: password
       };
 
-      // Use the fetch API to make a POST request to the registration API
+      //use the fetch API to make a POST request to the registration API
       fetch(insertAPIURL, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify(Data)
       }) 
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {
+        console.log(data);
+        if (data.status === "success"){
+          router.push('')
+        }
+      })
       .catch(error => console.error('Error:', error));
 
     }
@@ -64,6 +68,7 @@ export default function Register() {
             placeholder={"Password"}
             keyboardType={"default"} 
             onChangeText={(password) => setPassword(password)}
+            secureTextEntry
         />
     </Animated.View>
 
@@ -76,7 +81,7 @@ export default function Register() {
 
       <Animated.View entering={FadeInDown.delay(1000).duration(1000).springify()} exiting={BounceOut.springify()}>
         <Text className="text-white mb-2">Already have an account?</Text>
-        <TouchableOpacity onPress={()=>router.push('login')}>
+        <TouchableOpacity onPress={()=>router.push('')}>
           <Text style={{fontSize: hp(1.8), color: "#ff4651"}} className="text-red-500 font-bold text-center">Login</Text>
         </TouchableOpacity>
       </Animated.View>

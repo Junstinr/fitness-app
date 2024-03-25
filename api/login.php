@@ -2,7 +2,7 @@
 
 // Include database connection file
 include_once('db_connection.php');
-
+session_start();
 // Retrieve raw POST data
 $encodedData = file_get_contents('php://input');
 
@@ -24,16 +24,18 @@ $password = mysqli_real_escape_string($connection, isset($decodedData['password'
 
 
 // Retrieve hashed password from the database based on the username
-$query = "SELECT username, password FROM login WHERE username = '$username'";
+$query = "SELECT username, password, user_id FROM login WHERE username = '$username'";
 $result = mysqli_query($connection, $query);
 
 // Check if the user exists
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $hashedPassword = $row['password'];
+    $user_id = $row['user_id'];
 
     // Verify the password
     if (password_verify($password, $hashedPassword)) {
+        $_SESSION['user_id'] = $user_id;
         echo json_encode(array('status' => 'success', 'message' => 'Login successful.'));
     } else {
         echo json_encode(array('status' => 'error', 'message' => 'Incorrect password.'));
