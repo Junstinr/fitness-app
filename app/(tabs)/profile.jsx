@@ -47,7 +47,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUsername = async () => {
       try {
-        const response = await fetch("http://localhost/fitness-app/api/profile.php", {
+        const response = await fetch("http://fitness-app.atwebpages.com/profile.php", {
           method: 'GET',
           headers: {
             'Accept': 'application/json',

@@ -86,7 +86,7 @@ const SearchExercise = ({ isVisible, onClose, onDone }) => {
     
                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, height: hp(5) }} className='m-5 bg-white rounded-xl p-2'>
                     <Icon size={hp(2.5)} color={'gray'} name="search-outline"></Icon>
-                    <TextInput style={{}} className='' placeholder="Search for exercise111" autoCapitalize='none' onSubmitEditing={(event) => handleSearch(event.nativeEvent.text)} returnKeyType="done" />
+                    <TextInput style={{}} className='' placeholder="Search for exercise" autoCapitalize='none' onSubmitEditing={(event) => handleSearch(event.nativeEvent.text)} returnKeyType="done" />
                 </View>
     
                 <Text style={{ fontSize: hp(1.8) }} className='text-white font-bold ml-5 mb-1'>Search Result:</Text>

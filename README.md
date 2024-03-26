@@ -35,9 +35,13 @@ Create Template:
 
 
 ### Technologies Used
-- **React Native:** The app is built using the React Native framework, allowing for cross-platform compatibility and native-like performance.
+- **React Native:** The app utilizes the React Native framework to enable cross-platform development and ensure native-like performance on both iOS and Android devices.
 
-- **TailwindCSS(NativeWind):** The app used NativeWind in conjunction with React Native to provide rapid styling and layout capabilities.
+- **TailwindCSS(NativeWind):** NativeWind, a variant of TailwindCSS tailored for React Native, is employed for efficient and responsive styling and layout management within the app.
+
+- **MySQL:** The app relies on MySQL as the database management system to store and manage data, including user information, exercise records, and other relevant data.
+
+- **Apache:** Apache HTTP Server is used as the web server software to host the backend of the application, providing a reliable and scalable platform for serving web content and handling HTTP requests.
 
 - **Expo Router Navigation:** Navigation within the app is managed using Expo Router, providing seamless transitions between screens and a smooth user experience.
 
@@ -45,7 +49,7 @@ Create Template:
 
 - **Responsive Design:** The app is designed to adapt to various screen sizes and orientations, ensuring a consistent user experience across different devices.
 
-- **React Native Animation:** The app is animated uisng React Native Reanimated, providing a stunning user experience.
+- **React Native Animation:** React Native Animation is utilized to create dynamic and engaging user interface animations, enhancing the visual appeal and interactivity of the app.
 
 ### Prerequisites
 

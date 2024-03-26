@@ -34,7 +34,7 @@ export default function Login() {
         if (username.length === 0 || password.length === 0) {
             alert("Required field is missing!");
         } else {
-            var insertAPIURL = "http://localhost/fitness-app/api/login.php";
+            var insertAPIURL = "http://fitness-app.atwebpages.com/login.php";
             var headers = {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
