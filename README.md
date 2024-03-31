@@ -20,7 +20,7 @@ The Fitness App is a mobile application that allows users to search for exercise
 
 To view this project, you can use Expo Client app on your mobile device or scan the QR code below:
 
-[![image](https://github.com/Junstinr/fitness-app/assets/78913628/098ebdd7-cc64-42be-bda6-5f120f63f3de)]
+![image](https://github.com/Junstinr/fitness-app/assets/78913628/098ebdd7-cc64-42be-bda6-5f120f63f3de)
 
 exp://exp.host/@junstin/fitness-app?release-channel=default)
 
