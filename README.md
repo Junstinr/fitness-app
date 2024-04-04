@@ -1,5 +1,5 @@
-# Fitness App
-The Fitness App is a mobile application that allows users to search for exercises, select them, and create customized workout routines. Users can search for exercises based on specific body parts, view exercise details, and add exercises to their workout routine.
+# LiftLog
+The LiftLog App is a mobile application that allows users to search for exercises, select them, and create customized workout routines. Users can search for exercises based on specific body parts, view exercise details, and add exercises to their workout routine.
 
 ### Features
 - **Login/Signup:** Users can sign up for an account and securely log in to their account.
